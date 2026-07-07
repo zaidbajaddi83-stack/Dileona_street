@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DileonaStreet</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFFDD0;
+    font-family:Satoshi, sans-serif;
+    color:#fff;
+}
+
+/* ===================================
+            CAPSULE NAVBAR
+=================================== */
+
+.glass{
+
+    background:#0E0E0E;
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    border:2px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.55),
+    inset 0 1px rgba(255,255,255,.05);
+
+}
+
+/* ===================================
+              NAV LINKS
+=================================== */
+
+.nav-link{
+
+    position:relative;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    white-space:nowrap;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.nav-link:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-7px;
+
+    width:0;
+
+    height:2px;
+
+    background:#fff;
+
+    transform:translateX(-50%);
+
+    transition:.35s;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+/* ===================================
+            ICON BUTTONS
+=================================== */
+
+.icon-btn{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.icon-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===================================
+                LOGO
+=================================== */
+
+.logo{
+
+    width:430px;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+    transform:translateY(-5px);
+
+}
+
+.logo:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+}
+
+/* ===================================
+              HERO IMAGE
+=================================== */
+
+.hero img{
+
+    width:100%;
+
+    height:100vh;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-bottom-left-radius:70% 140px;
+
+    border-bottom-right-radius:70% 140px;
+
+}
+
+/* ===================================
+          RESPONSIVE MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .glass{
+
+        height:74px !important;
+
+    }
+
+    .logo{
+
+        width:185px;
+
+        transform:translateY(-2px);
+
+    }
+
+    .left-menu,
+    .right-menu{
+
+        display:none;
+
+    }
+
+    .hero img{
+
+        height:70vh;
+
+        border-bottom-left-radius:40% 60px;
+
+        border-bottom-right-radius:40% 60px;
+
+    }
+
+    .icon-btn{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="fixed top-6 left-1/2 -translate-x-1/2 w-[94%] max-w-[1750px] z-50">
+
+<nav class="glass relative rounded-full h-24">
+
+<!-- =========================
+            LOGO
+========================= -->
+
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+
+<a href="#">
+
+<img src="dileonastreet.png"
+
+class="logo"
+
+alt="DileonaStreet">
+
+</a>
+
+</div>
+
+<!-- =========================
+          LEFT MENU
+========================= -->
+
+<div class="left-menu absolute left-10 top-1/2 -translate-y-1/2 flex items-center gap-8">
+        <button class="icon-btn">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        viewBox="0 0 24 24">
+
+            <path d="M20 21a8 8 0 0 0-16 0"/>
+            <circle cx="12" cy="7" r="4"/>
+
+        </svg>
+
+    </button>
+
+    <button class="icon-btn">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        viewBox="0 0 24 24">
+
+            <path d="M6 7V6a4 4 0 0 1 8 0v1"/>
+            <path d="M3 7h18l-1 13H4L3 7Z"/>
+
+        </svg>
+
+    </button>
+
+    <a href="#" class="nav-link">JOURNAL</a>
+    <a href="#" class="nav-link">ABOUT US</a>
+
+</div>
+
+<!-- =========================
+          RIGHT MENU
+========================= -->
+
+<div class="right-menu absolute right-10 top-1/2 -translate-y-1/2 flex items-center gap-9">
+
+    <a href="#" class="nav-link">COLLECTION</a>
+    <a href="#" class="nav-link">SHOP</a>
+    <a href="#" class="nav-link">NEW IN</a>
+
+</div>
+
+<!-- =========================
+        MOBILE MENU
+========================= -->
+
+<div class="absolute right-6 top-1/2 -translate-y-1/2 md:hidden">
+
+    <button class="icon-btn">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24">
+
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+
+        </svg>
+
+    </button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- =========================
+          HERO SECTION
+========================= -->
+
+<section class="hero">
+
+    <img
+    src="Hero-Collections-Dileonastreet.png"
+    alt="Hero Image">
+
+</section>
+
+</body>
+
+</html>
